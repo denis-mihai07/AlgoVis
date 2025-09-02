@@ -157,6 +157,7 @@
     text-decoration: none;
     font-family: "Funnel Display";
     font-size: 1.1rem;
+    color: #7c3db3;
   }
   .menu_button a:first-child::after {
     content: "";

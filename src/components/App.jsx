@@ -9,44 +9,49 @@ import {
 } from "react-router-dom";
 import Header from "./Header.jsx";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: (
+        <>
+          <Header />
+          <HomePage />
+        </>
+      ),
+    },
+    {
+      path: "/sorting",
+      element: (
+        <>
+          <Header />
+          <AlgoSort />
+        </>
+      ),
+    },
+    {
+      path: "/searching",
+      element: (
+        <>
+          <Header />
+          <AlgoSort />
+        </>
+      ),
+    },
+    {
+      path: "/graph",
+      element: (
+        <>
+          <Header />
+          <AlgoSort />
+        </>
+      ),
+    },
+  ],
   {
-    path: "/",
-    element: (
-      <>
-        <Header />
-        <HomePage />
-      </>
-    ),
-  },
-  {
-    path: "/sorting",
-    element: (
-      <>
-        <Header />
-        <AlgoSort />
-      </>
-    ),
-  },
-  {
-    path: "/searching",
-    element: (
-      <>
-        <Header />
-        <AlgoSort />
-      </>
-    ),
-  },
-  {
-    path: "/graph",
-    element: (
-      <>
-        <Header />
-        <AlgoSort />
-      </>
-    ),
-  },
-]);
+    basename: "/AlgoVis",
+  }
+);
 
 function App() {
   return <RouterProvider router={router} />;

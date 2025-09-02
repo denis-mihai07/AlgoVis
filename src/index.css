@@ -1,3 +1,10 @@
+:root {
+  --p1: #a578cc1f;
+  --p2: #ce6cb6;
+  --p3: #7c3db3;
+  --p4: #330a57c7;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -21,7 +28,7 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #a96bdf;
+  background-color: var(--p3);
 }
 
 ::-webkit-scrollbar-thumb:hover {

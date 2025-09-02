@@ -2,19 +2,25 @@ import "../css/HomePage.css";
 import AlgoVisLogo from "../assets/AlgoVis.svg";
 import { div } from "framer-motion/client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowRight,
+  faAngleRight,
+  faAngleLeft,
+} from "@fortawesome/free-solid-svg-icons";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { map } from "../utils";
+import { map, getRoute } from "../utils";
 
 const CategoryBlock = ({ title, subtitle, type }) => {
+  const blockRoute = getRoute(title);
+
   return (
     <div className="block">
       <div className="block_title">{title}</div>
       <div className="block_subtitle">{subtitle}</div>
       <div className="block_footer">
         <div className="block_category">{type}</div>
-        <Link className="block_button" to={"/sorting"}>
+        <Link className="block_button" to={blockRoute}>
           <span>Visualise</span>
           <FontAwesomeIcon icon={faArrowRight} />
         </Link>
@@ -35,13 +41,13 @@ const HomePage = () => {
         <div className="homepage_content">
           <div className="category">
             <div className="category_name">
-              <div className="catname_container">
-                <div className="title">Sorting Algorithms </div>
+              <Link className="catname_container" to={"/sorting"}>
+                <div className="title">Sorting Algorithms</div>
                 <div className="subtitle">
                   Watch and compare how various sorting algorithms arrange data,
                   step by step, in real time.
                 </div>
-              </div>
+              </Link>
             </div>
             <div className="category_content">
               <CategoryBlock
@@ -59,10 +65,31 @@ const HomePage = () => {
                 subtitle={map.get("Insertion Sort")}
                 type={"Sorting"}
               />
+              <Link className="view_all_button" to={"/sorting"}>
+                <span>View All</span>
+                <div className="view_all_circle">
+                  <FontAwesomeIcon icon={faAngleRight} />
+                </div>
+              </Link>
             </div>
           </div>
-          <div className="category ">
+          <div className="category">
+            <div className="category_name cat2">
+              <Link className="catname_container" to={"/searching"}>
+                <div className="title">Searching Algorithms </div>
+                <div className="subtitle">
+                  Discover and compare how various searching algorithms find an
+                  item in a data set.
+                </div>
+              </Link>
+            </div>
             <div className="category_content cat3">
+              <Link className="view_all_button" to={"/searching"}>
+                <span>View All</span>
+                <div className="view_all_circle">
+                  <FontAwesomeIcon icon={faAngleLeft} />
+                </div>
+              </Link>
               <CategoryBlock
                 title={"Linear Search"}
                 subtitle={map.get("Linear Search")}
@@ -73,26 +100,22 @@ const HomePage = () => {
                 subtitle={map.get("Binary Search")}
                 type={"Searching"}
               />
-            </div>
-            <div className="category_name cat2">
-              <div className="catname_container ">
-                <div className="title">Searching Algorithms </div>
-                <div className="subtitle">
-                  Discover and compare how various searching algorithms find an
-                  item in a data set.
-                </div>
-              </div>
+              <CategoryBlock
+                title={"Interpolation Search"}
+                subtitle={map.get("Interpolation Search")}
+                type={"Searching"}
+              />
             </div>
           </div>
           <div className="category">
             <div className="category_name ">
-              <div className="catname_container ">
+              <Link className="catname_container" to={"/graph"}>
                 <div className="title">Graph Algorithms </div>
                 <div className="subtitle">
                   Visualize and compare how various graph algorithms traverse
                   and find paths in a network.
                 </div>
-              </div>
+              </Link>
             </div>
             <div className="category_content">
               <CategoryBlock
@@ -110,6 +133,12 @@ const HomePage = () => {
                 subtitle={map.get("Dijkstra")}
                 type={"Graph"}
               />
+              <Link className="view_all_button" to={"/graph"}>
+                <span>View All</span>
+                <div className="view_all_circle">
+                  <FontAwesomeIcon icon={faAngleRight} />
+                </div>
+              </Link>
             </div>
           </div>
         </div>

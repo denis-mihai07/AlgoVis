@@ -20,9 +20,9 @@ export default function Header() {
     <>
       <div className="header_container">
         <div className="header">
-          <div className="header_logo">
+          <Link className="header_logo" to={"/"}>
             <img src={AlgoVisLogo} />
-          </div>
+          </Link>
           <div className="header_nav">
             <ul className="header_list">
               <li>
