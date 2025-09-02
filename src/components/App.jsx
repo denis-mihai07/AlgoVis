@@ -8,6 +8,8 @@ import {
   BrowserRouter,
 } from "react-router-dom";
 import Header from "./Header.jsx";
+import Route from "./Route.jsx";
+import Footer from "./Footer.jsx";
 
 const router = createBrowserRouter(
   [
@@ -17,6 +19,7 @@ const router = createBrowserRouter(
         <>
           <Header />
           <HomePage />
+          <Footer />
         </>
       ),
     },
@@ -25,7 +28,8 @@ const router = createBrowserRouter(
       element: (
         <>
           <Header />
-          <AlgoSort />
+          <Route route={"Sorting"} />
+          <Footer />
         </>
       ),
     },
@@ -34,7 +38,8 @@ const router = createBrowserRouter(
       element: (
         <>
           <Header />
-          <AlgoSort />
+          <Route route={"Searching"} />
+          <Footer />
         </>
       ),
     },
@@ -43,7 +48,8 @@ const router = createBrowserRouter(
       element: (
         <>
           <Header />
-          <AlgoSort />
+          <Route route={"Graph"} />
+          <Footer />
         </>
       ),
     },

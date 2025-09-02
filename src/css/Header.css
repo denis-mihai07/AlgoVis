@@ -179,6 +179,9 @@
     align-items: center;
     position: relative;
   }
+  .menu_button a:hover {
+    color: var(--p4);
+  }
 
   .github_icon_menu {
     height: 60%;

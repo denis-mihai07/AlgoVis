@@ -1,0 +1,154 @@
+.route_container {
+  height: 50rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.route_header {
+  height: 25%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.route_title {
+  height: 50%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Funnel Display", sans-serif;
+  color: #53148ac7;
+  font-weight: bold;
+}
+
+.route_subtitle {
+  height: 50%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Funnel Display", sans-serif;
+  color: #8948c5c7;
+}
+
+.route_content {
+  height: 70%;
+  width: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.block {
+  height: 9.5rem !important;
+  /* width: auto !important; */
+}
+
+@media (max-width: 1000px) {
+  .route_title {
+    font-size: 2.8rem;
+    width: 100%;
+  }
+  .route_subtitle {
+    font-size: 1.6rem;
+    width: 70%;
+  }
+}
+@media (max-width: 800px) {
+  .route_title {
+    font-size: 2.8rem;
+    width: 100%;
+  }
+  .route_subtitle {
+    font-size: 1.6rem;
+    width: 70%;
+  }
+  .route_content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 580px) {
+  .route_container {
+    height: auto;
+  }
+  .route_header {
+    height: 11rem !important;
+  }
+  .route_title {
+    font-size: 2.7rem;
+    width: 100%;
+  }
+  .route_subtitle {
+    font-size: 1.4rem;
+    width: 80%;
+  }
+  .route_content {
+    height: 75%;
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 500px) {
+  .route_header {
+    height: 9rem !important;
+  }
+  .route_title {
+    font-size: 2.5rem;
+    width: 100%;
+  }
+  .route_subtitle {
+    font-size: 1.2rem;
+    width: 70%;
+  }
+  .route_content {
+    height: 80%;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 430px) {
+  .route_header {
+    height: 9rem !important;
+  }
+  .route_title {
+    font-size: 2rem;
+    width: 100%;
+  }
+  .route_subtitle {
+    font-size: 1.1rem;
+    width: 90%;
+  }
+  .route_content {
+    height: 80%;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 340px) {
+  .route_header {
+    height: 18%;
+  }
+  .route_title {
+    font-size: 1.8rem;
+    width: 100%;
+  }
+  .route_subtitle {
+    font-size: 1.1rem;
+    width: 95%;
+  }
+  .route_content {
+    height: 80%;
+    grid-template-columns: 1fr;
+  }
+}

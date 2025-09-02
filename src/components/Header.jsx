@@ -8,10 +8,6 @@ import { useEffect, useState } from "react";
 export default function Header() {
   const location = useLocation();
 
-  useEffect(() => {
-    console.log(location.pathname);
-  }, []);
-
   const [menuVisibility, setMenuVisibility] = useState(false);
 
   const handleMenuClick = () => setMenuVisibility((prev) => !prev);

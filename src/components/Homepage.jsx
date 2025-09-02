@@ -7,11 +7,10 @@ import {
   faAngleRight,
   faAngleLeft,
 } from "@fortawesome/free-solid-svg-icons";
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { map, getRoute } from "../utils";
+import { sortMap, searchMap, graphMap, getRoute } from "../utils";
 
-const CategoryBlock = ({ title, subtitle, type }) => {
+export const CategoryBlock = ({ title, subtitle, type }) => {
   const blockRoute = getRoute(title);
 
   return (
@@ -52,17 +51,17 @@ const HomePage = () => {
             <div className="category_content">
               <CategoryBlock
                 title={"Bubble Sort"}
-                subtitle={map.get("Bubble Sort")}
+                subtitle={sortMap.get("Bubble Sort")}
                 type={"Sorting"}
               />
               <CategoryBlock
                 title={"Selection Sort"}
-                subtitle={map.get("Selection Sort")}
+                subtitle={sortMap.get("Selection Sort")}
                 type={"Sorting"}
               />
               <CategoryBlock
                 title={"Insertion Sort"}
-                subtitle={map.get("Insertion Sort")}
+                subtitle={sortMap.get("Insertion Sort")}
                 type={"Sorting"}
               />
               <Link className="view_all_button" to={"/sorting"}>
@@ -92,17 +91,17 @@ const HomePage = () => {
               </Link>
               <CategoryBlock
                 title={"Linear Search"}
-                subtitle={map.get("Linear Search")}
+                subtitle={searchMap.get("Linear Search")}
                 type={"Searching"}
               />
               <CategoryBlock
                 title={"Binary Search"}
-                subtitle={map.get("Binary Search")}
+                subtitle={searchMap.get("Binary Search")}
                 type={"Searching"}
               />
               <CategoryBlock
                 title={"Interpolation Search"}
-                subtitle={map.get("Interpolation Search")}
+                subtitle={searchMap.get("Interpolation Search")}
                 type={"Searching"}
               />
             </div>
@@ -120,17 +119,17 @@ const HomePage = () => {
             <div className="category_content">
               <CategoryBlock
                 title={"Depth-First Search"}
-                subtitle={map.get("DFS")}
+                subtitle={graphMap.get("Depth-First Search")}
                 type={"Graph"}
               />
               <CategoryBlock
                 title={"Breadth-First Search"}
-                subtitle={map.get("BFS")}
+                subtitle={graphMap.get("Breadth-First Search")}
                 type={"Graph"}
               />
               <CategoryBlock
                 title={"Dijkstra's Algorithm"}
-                subtitle={map.get("Dijkstra")}
+                subtitle={graphMap.get("Dijkstra's Algorithm")}
                 type={"Graph"}
               />
               <Link className="view_all_button" to={"/graph"}>
