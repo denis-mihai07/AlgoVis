@@ -10,6 +10,7 @@ import {
 import Header from "./Header.jsx";
 import Route from "./Route.jsx";
 import Footer from "./Footer.jsx";
+import NotFound from "./NotFound.jsx";
 
 const router = createBrowserRouter(
   [
@@ -53,9 +54,19 @@ const router = createBrowserRouter(
         </>
       ),
     },
+    {
+      path: "*",
+      element: (
+        <>
+          <Header />
+          <NotFound />
+          <Footer />
+        </>
+      ),
+    },
   ],
   {
-    basename: "/AlgoVis",
+    // basename: "/AlgoVis",
   }
 );
 
